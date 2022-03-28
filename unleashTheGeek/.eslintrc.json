@@ -1,0 +1,23 @@
+{
+	"env": {
+		"node": true,
+		"jest/globals": true,
+		"es6": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2019,
+		"sourceType": "module"
+	},
+	"plugins": ["jest"],
+	"extends": ["eslint:recommended", "plugin:prettier/recommended"],
+	"rules": {
+		"quotes": ["error", "single"],
+		"semi": ["error", "always"],
+		"no-console": "off",
+		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"]
+	},
+	"globals": {
+		"readline": true,
+		"printTime": true
+	}
+}

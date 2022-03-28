@@ -1,0 +1,130 @@
+{
+	"name": "codingame_js",
+	"version": "0.0.1",
+	"description": "",
+	"keywords": "",
+	"homepage": "",
+	"main": "",
+	"author": "Zweihänder",
+	"private": true,
+	"license": "MIT",
+	"scripts": {
+		"test": "jest",
+		"build": "webpack",
+		"watch": "webpack --watch"
+	},
+	"jest": {
+		"transform": {
+			"^.+\\.jsx?$": "babel-jest"
+		},
+		"coverageDirectory": "coverage",
+		"roots": [
+			"<rootDir>/src/"
+		],
+		"testEnvironment": "node",
+		"moduleNameMapper": {
+			"^.+\\.hbs$": "<rootDir>/src/__mocks__/hbsMock.js"
+		}
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		]
+	},
+	"eslintConfig": {
+		"env": {
+			"node": true,
+			"es6": true
+		},
+		"parserOptions": {
+			"ecmaVersion": 2019
+		},
+		"plugins": [
+			"jest"
+		],
+		"rules": {
+			"quotes": [
+				"error",
+				"single"
+			],
+			"semi": [
+				"error",
+				"always"
+			],
+			"no-console": "off",
+			"no-mixed-spaces-and-tabs": [
+				"error",
+				"smart-tabs"
+			]
+		}
+	},
+	"jshintConfig": {
+		"esversion": 9,
+		"node": true,
+		"globals": {
+			"afterAll": false,
+			"afterEach": false,
+			"beforeAll": false,
+			"beforeEach": false,
+			"describe": false,
+			"expect": false,
+			"fit": false,
+			"it": false,
+			"jasmine": false,
+			"jest": false,
+			"pending": false,
+			"pit": false,
+			"require": false,
+			"test": false,
+			"xdescribe": false,
+			"xit": false,
+			"xtest": false,
+			"readline": true
+		},
+		"laxbreak": true
+	},
+	"prettier": {
+		"singleQuote": true,
+		"trailingComma": "es5",
+		"tabWidth": 4,
+		"useTabs": true,
+		"arrowParens": "always"
+	},
+	"stylelint": {
+		"extends": "stylelint-config-standard",
+		"rules": {
+			"indentation": "tab",
+			"max-empty-lines": 2,
+			"comment-whitespace-inside": null,
+			"declaration-block-no-shorthand-property-overrides": true,
+			"declaration-colon-newline-after": null,
+			"no-descending-specificity": null
+		}
+	},
+	"browserslist": [
+		"maintained node versions",
+		"> 0.2%",
+		"last 2 versions",
+		"Firefox ESR",
+		"not dead"
+	],
+	"devDependencies": {
+		"@babel/core": "^7.8.7",
+		"@babel/preset-env": "^7.8.7",
+		"@babel/register": "^7.8.6",
+		"babel-jest": "^25.1.0",
+		"del": "^5.1.0",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.10.0",
+		"eslint-plugin-jest": "^23.8.2",
+		"eslint-plugin-prettier": "^3.1.2",
+		"gulp-babel": "^8.0.0",
+		"gulp-debug": "^4.0.0",
+		"jest": "^25.1.0",
+		"jest-mock-console": "^1.0.0",
+		"prettier": "^1.19.1",
+		"ts-loader": "^6.2.1",
+		"webpack": "^4.42.0",
+		"webpack-cli": "^3.3.11"
+	}
+}
